@@ -118,9 +118,21 @@ main {
 
 .skill_list {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
     gap: 20px;
     padding: 20px 0;
+    grid-template-columns: 1fr;
+}
+/*For Tablets */
+@media (min-width: 600px) {
+    .skill_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*For Desktop */
+@media (min-width: 900px) {
+    .skill_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .skill_card {
