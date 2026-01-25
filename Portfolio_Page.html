@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket Singh's Portfolio</title>
+    <link rel="stylesheet" href="Portfolio_Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--For Icons-->
+</head>
+<body>
+   <section id="home">
+    <header class="navbar">
+        <div class="header_content">
+            <div class= "brand_group">
+            <div class="name" id="name_styled">Aniket Singh</div> 
+            <!--In Examination They Asked Me For ABC Client Portfolio Website I Have Changed It Before Uploading To Github-->
+            <span class="name2">927-968-XXXX</span> 
+            <span class="name2">aniketsingh@example.com</span>
+            <!---I Am Just Putting Example Emails It Will Be Updated Surely-->
+            </div>
+            <nav>
+                <ul class="nav_list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    </section>
+
+    <main>
+        <section id="about" class="section about_me">
+            <h2>About Me</h2>
+            <div class="about_content">
+                <img src="profile.png" alt="Client Profile Image" class="profile_img">
+                <div class="profile_text">
+                    <h3>Hi , I'm Aniket Singh</h3>
+                   <p class="Text">I Am A Second Year B.Tech Student Pursuing in Computer Science And Engineering at Jaypee University , Anoopshahr</p>
+            <p class="Text">I Am Interested in Game Development And Android Development And I Will Be Looking Forward For My Future Projects  </p>
+            <!--I Will Change Everything From Here Near Future-->             
+        </section>
+
+      <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <div class="skill_list">
+            <div class="skill_card">
+                <i class="fab fa-html5"></i> 
+                <p>HTML5</p>
+                <strong>1/2 years experience</strong>
+            </div>
+            <div class="skill_card">
+                <i class="fab fa-css3-alt"></i> 
+                <p>CSS3</p>
+                <strong>1/2 years experience</strong>
+            </div>
+            <div class="skill_card">
+                <i class="fab fa-js-square"></i> 
+                <p>JavaScript</p>
+                <strong>1/2 years experience</strong>
+            </div>
+            <div class="skill_card">
+                <i class="fab fa-java"></i> 
+                <p>Java</p>
+                <strong>1/2 years experience</strong>
+            </div>
+            <div class="skill_card">
+                <i class="fab fa-git-alt"></i> 
+                <p>Git</p>
+                <strong> 1/2 years experience</strong>
+            </div>
+        </div>
+    </section>
+    
+        <section id="projects" class="section projects">
+            <h2>Projects</h2>
+            <div class="project_list">
+                <div class="project_card">
+                    <h3>Pet Care Scheduler</h3>
+                    <p>An application Where You can Store Information For Future Appointments </p>
+                    <a href="https://github.com/Aniketsingh-cmd/petcare-scheduler-app.git">View Project</a>
+                </div>
+             
+                <div class="project_card">
+                    <h3>Mini Slot Machine Game</h3>
+                    <p>Built a Minigame Using Java , You can Spin to Win , Check Your Balance , Top Up and More !!</p>
+                    <a href="https://github.com/Aniketsingh-cmd/SlotMachine">View Project</a>
+                </div>
+                <div class="project_card">
+                    <h3>Recipe Finder App</h3> <!--Just A Sample App , There's No Such App I Will Change It Soon😃-->
+                    <p>A dynamic web application using a public API to allow users to search and save recipes.</p>
+                    <a href="#projects">View Project</a>
+                </div>
+            </div>
+        </section>
+
+       <section id="recommendations" class="section recommendations">
+    <h2>Recommendations</h2>
+    <!--Switch These To however You Like ☺️☺️, These Are Sample Recommendations -->
+    <div class="recommendation_list" id="recommendation_container">
+        <div class="recommendation_card">
+            <p>"Aniket Singh is an incredibly fast learner. Their dedication to mastering new frameworks is commendable."</p>
+            <cite>- Jane Doe, Senior Developer at TechCorp</cite>
+        </div>
+        <div class="recommendation_card">
+            <p>"A highly valuable team member. Their problem-solving skills saved us countless hours on the last project."</p>
+            <cite>- Mark Smith, Project Manager</cite>
+        </div>
+        <div class="recommendation_card">
+            <p>"Excellent communication and clean code. I would gladly work with Aniket Singh Again."</p>
+            <cite>- Lisa Ray, Peer Colleague</cite>
+        </div>
+    </div>
+
+    <div class="recommendation_form_container">
+        <h3>Leave a Recommendation</h3>
+        <form id="recommendation_form">
+            <textarea id="new_recommendation" placeholder="Your recommendation text..." required></textarea>
+            <input type="text"  id="recommender_name" placeholder="Your Name/Title" required>
+            <button type="submit">Submit Recommendation</button>
+        </form>
+    </div>
+</section>
+<div id="popup_message" class="popup">
+    <div class="popup_content">
+        <i class="fas fa-check-circle"></i>
+        <p>Thank you! Your recommendation has been submitted.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+    </main>
+     <div id="go-home">
+        <a href="#home">
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg"/>
+        </a>
+    </div>
+    <script src="Portfolio_Script.js"></script>
+</body>
+</html>
