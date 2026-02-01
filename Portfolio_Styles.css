@@ -3,12 +3,14 @@ body {
     background-color: #f7f7f7; /* Light gray background */
     margin: 0;
     padding: 0;
-    font-family:serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
 }
-
-
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
 .section {
     max-width: 1000px;
     margin: 0 auto; /* Centers the block horizontally */
@@ -56,13 +58,11 @@ main {
 }
 
 .name {
-    align-items: start;
     color: #fff;
     font-size: 1.8em;
     font-weight: bold;
 }
 .name2{
-    align-items:inherit;
     color:#ddd;
     font-size: 0.9em;
     font-weight:bold ;
@@ -167,36 +167,82 @@ main {
 
 .project_list {
     /* Simple block layout for a list like appearance */
-    display: block; 
-    padding: 0 20px;
+    display: flex; 
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project_card {
-    
-    border: none;
-    border-bottom: 1px dashed #ccc; 
-    padding: 20px 0;
-    margin-bottom: 10px;
-    text-align: left;
+    width: 250px;
+    height: 300px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    perspective: 1000px;
 }
-
+.project_card.flipped{
+    z-index: 10;
+}
+.card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.project_card.flipped .card_inner {
+    transform: rotateY(180deg);
+}
+.card_front, .card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when turned */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.card_front {
+    background-color: #ffffff;
+    color: #333;
+}
+.card_back {
+    background-color: #4b0082;
+    color: white;
+    transform: rotateY(180deg); /* Pre-rotated so it faces the "back" */
+}
+.card_back a {
+    display: inline-block; 
+    margin-top: 20px;
+    background-color: #ffffff; 
+    color: #4b0082;            
+    padding: 10px 20px;        
+    border-radius: 25px;       
+    text-decoration: none;     
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease;
+}
+.card_back a:hover {
+    background-color: #c6d70f; /* Turns Gold On Hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
 .project_card h3 {
     color: #4b0082;
     font-size: 1.5em;
     margin-bottom: 5px;
 }
-
-.project_card a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin-top: 5px;
-}
-.project_card a:hover{
-    text-decoration:underline;
-}
-
 .recommendation_list {
     display: flex;
     gap: 20px;
