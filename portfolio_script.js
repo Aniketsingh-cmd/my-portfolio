@@ -47,4 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
             closePopup();
         }
     };
+    // Dropdown Menu Logic
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('nav-menu');
+
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked (so it doesn't stay open)
+document.querySelectorAll('.nav_list a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
 });

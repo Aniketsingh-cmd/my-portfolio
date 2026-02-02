@@ -35,8 +35,6 @@ h2 {
 main {
     margin-top: 70px; 
 }
-
-
 .navbar {
     background-color: #4b0082; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.533);
@@ -45,6 +43,13 @@ main {
     width: 100%;
     z-index: 1000;
     padding: 10px 0; /* Vertical padding */
+}
+/*This Will Only be available for Mobile phones*/
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .header_content {
@@ -127,6 +132,96 @@ main {
     .skill_list {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* This targets mobile phones, to Improve viewing */
+/* Improved Mobile Responsiveness */
+
+@media screen and (max-width: 600px) {
+  /* 1. Fix the Header/Navbar */
+.header_content {
+    flex-direction: row; 
+    justify-content: space-between;
+    position: relative; 
+  }
+  .menu-icon{
+    display: block;
+  }
+  .brand_group {
+    align-items: center; 
+    margin-bottom: 10px;
+  }
+#nav-menu {
+        display: block; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4b0082;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); 
+        transition: all 0.4s ease-in-out; 
+        pointer-events: none; 
+    }
+
+    #nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); 
+        pointer-events: auto;
+    }
+.nav_list {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.nav_list li {
+    width: 100%;
+    margin: 10px 0; 
+}
+
+  /* 2. Fix the About Me Section */
+  .about_content {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile_img {
+    width: 150px; 
+    height: 150px;
+  }
+
+  /* 3. Fix Recommendation Cards */
+  .recommendation_list {
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px;
+  }
+
+  .recommendation_card {
+    width: 100% !important; 
+    max-width: 400px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Make the form inputs easier to tap */
+  .recommendation_form_container {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+  
+  #recommendation_form button {
+    width: 100%;
+    padding: 12px;
+  }
 }
 /*For Desktop */
 @media (min-width: 900px) {
@@ -377,3 +472,4 @@ main {
 .popup_content button:hover {
     background-color: #310055;
 }
+
